@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 
 export const TaskForm = ({ setTask }) => {
@@ -11,13 +12,15 @@ export const TaskForm = ({ setTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const task = {
+    const newTask = {
       id: nanoid(),
       text: value,
-      status: "Active",
+      completed: false,
     };
 
-    setTask(task);
+    setTask((prevTask) => [...prevTask, newTask]);
+
+    setValue("");
   };
 
   return (
@@ -32,4 +35,8 @@ export const TaskForm = ({ setTask }) => {
       <button type="submit">Add task</button>
     </form>
   );
+};
+
+TaskForm.propTypes = {
+  setTask: PropTypes.func,
 };

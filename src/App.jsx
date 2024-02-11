@@ -3,14 +3,20 @@ import { Layout } from "./components/Layout/Layout";
 import { AppBar } from "./components/AppBar/AppBar";
 import { TaskForm } from "./components/TaskForm/TaskForm";
 import { TaskList } from "./components/TaskList/TaskList";
+
 function App() {
   const [task, setTask] = useState([]);
-  console.log(task);
+  const [status, setStatus] = useState("");
+
+  const handleFilterChange = (status) => {
+    setStatus(status);
+  };
+
   return (
     <Layout>
-      <AppBar />
+      <AppBar handleFilterChange={handleFilterChange} />
       <TaskForm setTask={setTask} />
-      <TaskList />
+      <TaskList task={task} setTask={setTask} status={status} />
     </Layout>
   );
 }

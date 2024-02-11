@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
 import { TaskCounter } from "../CounterTask/CounterTask";
 import { StatusFilter } from "../StatusFilter/StatusFilter";
-export const AppBar = () => {
+
+export const AppBar = ({ handleFilterChange }) => {
   return (
     <header>
       <section>
@@ -9,8 +11,12 @@ export const AppBar = () => {
       </section>
       <section>
         <h2>Filter by status</h2>
-        <StatusFilter />
+        <StatusFilter handleFilterChange={handleFilterChange} />
       </section>
     </header>
   );
+};
+
+AppBar.propTypes = {
+  handleFilterChange: PropTypes.func,
 };
