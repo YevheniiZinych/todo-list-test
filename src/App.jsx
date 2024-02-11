@@ -14,6 +14,9 @@ function App() {
 
   return (
     <Layout>
+      <h1 className="mx-auto mt-10 mb-20 font-bold text-l text-yellow tracking-s text-shadow-default ">
+        ToDo List
+      </h1>
       <AppBar handleFilterChange={handleFilterChange} />
       <TaskForm setTask={setTask} />
       <TaskList task={task} setTask={setTask} status={status} />

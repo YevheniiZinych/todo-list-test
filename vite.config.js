@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/todo-list-test",
   plugins: [react()],
   server: {
-    port: 4040,
+    port: 4080,
     open: true,
   },
 });

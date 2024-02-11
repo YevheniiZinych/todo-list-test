@@ -30,8 +30,6 @@ export const TaskList = ({ task, setTask, status }) => {
 
   const visibleTask = getVisibleTasks(task, status);
 
-  console.log(visibleTask);
-
   return (
     <ul>
       {[...visibleTask].length > 0 &&

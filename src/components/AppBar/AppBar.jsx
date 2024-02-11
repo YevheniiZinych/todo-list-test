@@ -4,13 +4,13 @@ import { StatusFilter } from "../StatusFilter/StatusFilter";
 
 export const AppBar = ({ handleFilterChange }) => {
   return (
-    <header>
-      <section>
-        <h2>Tusks</h2>
+    <header className="flex justify-between items-center mb-20">
+      <section className=" flex flex-col ml-10  text-center">
+        <h2 className="mr-8">Tusks</h2>
         <TaskCounter />
       </section>
-      <section>
-        <h2>Filter by status</h2>
+      <section className="flex flex-col justify-center text-center">
+        <h2 className="mb-3">Filter by status</h2>
         <StatusFilter handleFilterChange={handleFilterChange} />
       </section>
     </header>
