@@ -1,7 +1,13 @@
+import PropTypes from "prop-types";
+
 export const Layout = ({ children }) => {
   return (
-    <main className="container h-dvh flex flex-col xl border-solid border-2 border-sky-500 mx-auto">
+    <main className="container h-dvh flex flex-col xl  mx-auto">
       {children}
     </main>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.element,
 };

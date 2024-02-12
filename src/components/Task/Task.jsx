@@ -3,13 +3,16 @@ import { MdClose } from "react-icons/md";
 
 export const Task = ({ id, text, completed, onDeleteTask, onChangeStatus }) => {
   return (
-    <div>
+    <div className="flex justify-around ">
       <input
         type="checkbox"
         checked={completed}
         onChange={() => onChangeStatus(id)}
       />
-      <p>{text}</p>
+      <div>
+        <a href=""></a>
+        <p className=" w-350 break-words text-wrap">{text}</p>
+      </div>
       <button type="button" onClick={() => onDeleteTask(id)}>
         <MdClose
           style={{
@@ -27,4 +30,5 @@ Task.propTypes = {
   task: PropTypes.array,
   onDeleteTask: PropTypes.func,
   onChangeStatus: PropTypes.func,
+  completed: PropTypes.bool,
 };

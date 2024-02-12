@@ -13,14 +13,16 @@ function App() {
   };
 
   return (
-    <Layout>
-      <h1 className="mx-auto mt-10 mb-20 font-bold text-l text-yellow tracking-s text-shadow-default ">
-        ToDo List
-      </h1>
-      <AppBar handleFilterChange={handleFilterChange} />
-      <TaskForm setTask={setTask} />
-      <TaskList task={task} setTask={setTask} status={status} />
-    </Layout>
+    <div className="bg-[url('./img/back.jpg')] bg-no-repeat bg-center bg-cover">
+      <Layout>
+        <h1 className="mx-auto mt-10 mb-20 font-bold text-l text-yellow tracking-s text-shadow-default ">
+          ToDo List
+        </h1>
+        <AppBar task={task} handleFilterChange={handleFilterChange} />
+        <TaskForm setTask={setTask} />
+        <TaskList task={task} setTask={setTask} status={status} />
+      </Layout>
+    </div>
   );
 }
 
