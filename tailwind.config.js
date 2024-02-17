@@ -18,7 +18,11 @@ export default {
       },
       width: {
         500: "500px",
+        550: "550px",
         350: "350px",
+      },
+      margin: {
+        "margin-auto": "0 auto",
       },
       backgroundImage: {
         "main-back": "url('./src/img/back.jpg')",
@@ -43,6 +47,7 @@ export default {
           "backdrop-filter": " blur(5px)",
           border: "1px solid rgba(255, 255, 255, 0.3)",
         },
+        ".custom-scrollbar": {},
       });
     },
   ],

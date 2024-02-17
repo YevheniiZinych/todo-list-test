@@ -31,12 +31,13 @@ export const TaskList = ({ task, setTask, status }) => {
   const visibleTask = getVisibleTasks(task, status);
 
   return (
-    <ul className="flex flex-col items-center ">
-      {[...visibleTask].length > 0 &&
-        [...visibleTask].map(({ id, text, completed }) => (
+    <ul className="flex flex-col items-center overflow-auto w-550 m-margin-auto ">
+      {visibleTask?.length > 0 &&
+        visibleTask.map(({ id, text, completed }) => (
           <li
+            data-testid="task-item"
             key={id}
-            className=" [&:not(:last-child)]:mb-3 custom-background border-solid border-2 border-sky-500 w-500 rounded-lg "
+            className=" flex items-center justify-around [&:not(:last-child)]:mb-3 custom-background border-solid border-2 border-sky-500 w-500 min-h-20 rounded-lg "
           >
             <Task
               id={id}

@@ -19,5 +19,5 @@ export const AppBar = ({ handleFilterChange, task }) => {
 
 AppBar.propTypes = {
   handleFilterChange: PropTypes.func,
-  task: PropTypes.object,
+  task: PropTypes.array,
 };

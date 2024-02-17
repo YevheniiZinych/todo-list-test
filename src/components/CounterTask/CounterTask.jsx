@@ -26,5 +26,5 @@ export const TaskCounter = ({ task }) => {
 };
 
 TaskCounter.propTypes = {
-  task: PropTypes.object,
+  task: PropTypes.array,
 };
